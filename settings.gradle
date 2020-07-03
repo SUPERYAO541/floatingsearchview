@@ -1,2 +1,3 @@
+include ':lib-floatingsearchview'
 include ':app'
 rootProject.name = "floatingsearchview"
