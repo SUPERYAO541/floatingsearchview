@@ -340,6 +340,9 @@ public class MenuPopupHelper implements AdapterView.OnItemClickListener, View.On
         public View getView(int position, View convertView, ViewGroup parent) {
             if (convertView == null) {
                 convertView = mInflater.inflate(ITEM_LAYOUT, parent, false);
+                // disable group_divider
+                View divider = convertView.findViewById(R.id.group_divider);
+                if (divider != null) divider.setVisibility(View.GONE);
             }
             MenuView.ItemView itemView = (MenuView.ItemView) convertView;
             if (mForceShowIcon) {
